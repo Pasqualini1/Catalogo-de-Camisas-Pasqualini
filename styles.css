@@ -3,20 +3,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url("imagens/fundo.png");
+  background: url("imagens/fundo2.png") no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding-top: 80px;
+  min-height: 100vh;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
-/* Cabeçalho */
 header {
-  background-color: #dadada;
-  color: #003366;
-  padding: 8px;
+  background: linear-gradient(90deg, #004488, #0077cc);
+  color: white;
+  padding: 20px;
   font-size: 26px;
   font-weight: 600;
   position: fixed;
@@ -27,6 +25,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 80px; /* Defini um tamanho fixo para o header */
+}
+
+/* Ajuste no conteúdo para não ficar escondido atrás do header */
+main {
+  flex: 1; /* Ocupa o espaço restante da tela */
+  padding-top: 100px; /* Dá espaço para o header */
 }
 
 /* Ícone do menu */
@@ -81,7 +87,7 @@ header {
   justify-content: center;
   gap: 20px;
   padding: 30px;
-  margin-top: 120px;
+  margin-top: 40px; /* Diminui para ajustar o espaçamento */
 }
 
 /* Estilizando cada produto */
@@ -163,18 +169,15 @@ header {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Título Lançamentos */
 .titulo-lancamentos {
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  color: #ffffff; /* Mantém o texto branco para contraste */
-  background: linear-gradient(
-    90deg,
-    #0077cc,
-    #004488
-  ); /* Mesmo gradiente do botão */
+  color: #ffffff;
+  background: linear-gradient(90deg, #0077cc, #004488);
   padding: 15px;
-  margin-top: 80px; /* Ajuste conforme necessário */
+  margin-top: 90px; /* Ajustado para alinhar com o header */
   width: 100%;
-  border-radius: 6px; /* Suaviza as bordas */
+  border-radius: 6px;
 }
