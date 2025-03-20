@@ -9,6 +9,7 @@
   </head>
   <body>
     <header>
+      <span class="menu-icon" onclick="abrirMenu()">☰</span>
       <h1>Catálogo de Camisas</h1>
     </header>
 
@@ -65,6 +66,33 @@
           <button>Comprar</button>
         </a>
       </div>
+
+      <!-- Barra lateral -->
+      <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()"
+          >×</a
+        >
+        <a href="#">Premier League</a>
+        <a href="#">La Liga</a>
+        <a href="#">Serie A</a>
+        <a href="#">Bundesliga</a>
+        <a href="#">Seleções</a>
+      </div>
+
+      <!-- Seção do catálogo -->
+      <section class="catalogo">
+        <!-- Aqui vão os produtos -->
+      </section>
     </section>
+
+    <script>
+      function abrirMenu() {
+        document.getElementById("sidebar").style.width = "250px";
+      }
+
+      function fecharMenu() {
+        document.getElementById("sidebar").style.width = "0";
+      }
+    </script>
   </body>
 </html>
