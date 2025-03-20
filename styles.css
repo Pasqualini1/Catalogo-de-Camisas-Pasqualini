@@ -1,89 +1,180 @@
+/* Importando uma fonte moderna */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
 /* Estilo geral */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  text-align: center;
+  background-image: url("imagens/fundo.png");
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+  padding-top: 80px; /* Ajuste conforme a altura do cabeçalho */
 }
 
 /* Cabeçalho */
 header {
-  background-color: #222;
-  color: white;
+  background-color: #dadada; /* Cor de fundo */
+  color: #003366; /* Cor do texto */
   padding: 20px;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 0; /* Remove a borda arredondada para ocupar a tela inteira */
+  position: fixed; /* Deixa fixo no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o header fique acima dos outros elementos */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+}
+
+header h1 {
+  width: 100%; /* Faz o título ocupar toda a largura do header */
+  text-align: center; /* Centraliza o texto */
 }
 
 /* Seção do catálogo */
 .catalogo {
   display: flex;
-  flex-wrap: wrap; /* Permite que os produtos quebrem para outra linha se necessário */
-  justify-content: center; /* Centraliza os produtos na tela */
-  gap: 20px; /* Adiciona espaçamento entre os produtos */
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+  margin-top: 100px; /* Ajuste conforme necessário */
 }
 
 /* Estilizando cada produto */
 .produto {
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .produto img {
   width: 100%;
   border-radius: 10px;
+  display: block; /* Evita espaços extras ao redor da imagem */
 }
 
+/* Melhorando os títulos */
 .produto h2 {
   font-size: 18px;
   margin: 10px 0;
+  color: #003366; /* Azul escuro */
+  font-weight: 600;
 }
 
 .produto p {
-  font-size: 16px;
-  color: #333;
+  font-size: 15px;
+  color: #555;
 }
 
+/* Botão aprimorado */
 .produto button {
-  background-color: #008cba;
+  background: linear-gradient(90deg, #0077cc, #004488);
   color: white;
   border: none;
   padding: 10px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .produto button:hover {
-  background-color: #005f7a;
+  background: linear-gradient(90deg, #005f9e, #002b5e);
+  transform: scale(1.05);
 }
 
-.produto {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito quando o mouse passa por cima */
+/* Efeito ao passar o mouse */
 .produto:hover {
-    transform: scale(1.05); /* Aumenta levemente o tamanho */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
-    cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 600px) { 
-    .catalogo {
-        flex-wrap: wrap; /* Garante que os itens não empilhem demais */
-    }
-    .produto {
-        width: 48%; /* Ajusta para caber dois produtos lado a lado */
-    }
+.close:hover {
+  color: #003366;
+}
 
-  
+/* Botão aprimorado */
+.produto button {
+  background: linear-gradient(90deg, #0077cc, #004488); /* Gradiente azul */
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Efeito ao passar o mouse */
+.produto button:hover {
+  background: linear-gradient(90deg, #005f9e, #002b5e);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao clicar */
+.produto button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícone do menu */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Barra lateral */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #003366;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+/* Links do menu */
+.sidebar a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #005f9e;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 30px;
+  cursor: pointer;
+}
