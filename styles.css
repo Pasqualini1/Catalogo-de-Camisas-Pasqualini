@@ -18,10 +18,9 @@ header {
 /* Seção do catálogo */
 .catalogo {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permite que os produtos quebrem para outra linha se necessário */
+  justify-content: center; /* Centraliza os produtos na tela */
+  gap: 20px; /* Adiciona espaçamento entre os produtos */
 }
 
 /* Estilizando cada produto */
@@ -77,4 +76,14 @@ header {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
     cursor: pointer;
 }
+
+@media (max-width: 600px) { 
+    .catalogo {
+        flex-wrap: wrap; /* Garante que os itens não empilhem demais */
+    }
+    .produto {
+        width: 48%; /* Ajusta para caber dois produtos lado a lado */
+    }
+
+  
 
