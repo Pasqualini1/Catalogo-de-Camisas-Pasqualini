@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pasqualini Camisa de Time</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -13,77 +12,70 @@
       <h1>Catálogo de Camisas</h1>
     </header>
 
-    <section class="catalogo">
-      <div class="produto">
-        <img src="imagens/atletigomg.jpg" alt="Camisa Atlético" />
-        <h4>Camisa Atlético - 25/26<br />SEM PATROCINADORES</h4>
+    <!-- Barra Lateral (Menu) -->
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()"
+        >×</a
+      >
+      <a href="#">Premier League</a>
+      <a href="#">La Liga</a>
+      <a href="#">Serie A</a>
+      <a href="#">Bundesliga</a>
+      <a href="#">Seleções</a>
+    </div>
 
-        <p>R$ 144,90</p>
-        <a
-          href="https://api.whatsapp.com/send?phone=5544997064408&text=
-        Olá, quero comprar a camisa do Atlético MG!"
-          target="_blank"
-        >
+    <!-- Seção do Catálogo -->
+<section class="catalogo">
+
+  <div class="titulo-lancamentos">
+    LANÇAMENTOS
+  </div>
+  
+  <div class="produto">
+      <img src="imagens/atletigomg.jpg" alt="Camisa Atlético">
+      <h4>Camisa Atlético - 25/26<br>SEM PATROCINADORES</h4>
+      <p>R$ 144,90</p>
+      <a href=
+      https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Atlético MG!" target="_blank">
           <button>Comprar</button>
-        </a>
-      </div>
+      </a>
+  </div>
 
-      <div class="produto">
-        <img src="imagens/bahia.png" alt="Camisa Bahia" />
-        <h4>Camisa Bahia - 24/25<br />+ PATROCINADORES</h4>
-        <p>R$ 144,90</p>
-        <a
-          href="https://api.whatsapp.com/send?phone=5544997064408&text=
-        Olá, quero comprar a camisa do Bahia!"
-          target="_blank"
-        >
+  <div class="produto">
+      <img src="imagens/bahia.png" alt="Camisa Bahia">
+      <h4>Camisa Bahia - 24/25<br>+ PATROCINADORES</h4>
+      <p>R$ 144,90</p>
+      <a href=
+      "https://api.whatsapp.com/send?phone=5544997064408&text=
+      lá, quero comprar a camisa do Bahia!" target="_blank">
           <button>Comprar</button>
-        </a>
-      </div>
+      </a>
+  </div>
 
-      <div class="produto">
-        <img src="imagens/Flamengo.png" alt="Camisa Flamengo" />
-        <h4>Camisa Flamengo - 25/26<br />+ PATROCINADORES</h4>
-        <p>R$ 144,90</p>
-        <a
-          href="https://api.whatsapp.com/send?phone=5544997064408&text=
-        Olá, quero comprar a camisa do Flamengo!"
-          target="_blank"
-        >
+  <div class="produto">
+      <img src="imagens/Flamengo.png" alt="Camisa Flamengo">
+      <h4>Camisa Flamengo - 25/26<br>+ PATROCINADORES</h4>
+      <p>R$ 144,90</p>
+      <a href=
+      https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Flamengo!" target="_blank">
           <button>Comprar</button>
-        </a>
-      </div>
+      </a>
+  </div>
 
-      <div class="produto">
-        <img src="imagens/Santos.png" alt="Camisa Santos" />
-        <h4>Camisa Santos - 24/25<br />+ PATROCINADORES</h4>
-        <p>R$ 149,90</p>
-        <a
-          href="https://api.whatsapp.com/send?phone=5544997064408&text=
-        Olá, quero comprar a camisa do Santos!"
-          target="_blank"
-        >
+  <div class="produto">
+      <img src="imagens/Santos.png" alt="Camisa Santos">
+      <h4>Camisa Santos - 24/25<br>+ PATROCINADORES</h4>
+      <p>R$ 149,90</p>
+      <a href=
+      "https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Santos!" target="_blank">
           <button>Comprar</button>
-        </a>
-      </div>
+      </a>
+  </div>
+</section>
 
-      <!-- Barra lateral -->
-      <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()"
-          >×</a
-        >
-        <a href="#">Premier League</a>
-        <a href="#">La Liga</a>
-        <a href="#">Serie A</a>
-        <a href="#">Bundesliga</a>
-        <a href="#">Seleções</a>
-      </div>
-
-      <!-- Seção do catálogo -->
-      <section class="catalogo">
-        <!-- Aqui vão os produtos -->
-      </section>
-    </section>
 
     <script>
       function abrirMenu() {
