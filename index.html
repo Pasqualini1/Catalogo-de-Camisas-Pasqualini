@@ -19,6 +19,20 @@
       <img src="imagens/logoloja1.png" alt="Logo" class="logo" />
     </header>
 
+    <!-- Barra de Pesquisa -->
+    <div class="pesquisa-container">
+      <form id="form-pesquisa">
+        <input
+          type="text"
+          id="pesquisa"
+          name="q"
+          placeholder="Pesquisar time..."
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+
     <!-- Barra Lateral (Menu) -->
     <div id="sidebar" class="sidebar">
       <a href="javascript:void(0)" class="close-btn" onclick="fecharMenu()"
@@ -53,7 +67,7 @@
           />
         </div>
         <div class="swiper-slide">
-          <img src="times-alta.jpg" alt="Times em Alta" />
+          <img src="imagens/times-alta.jpg" alt="Times em Alta" />
         </div>
       </div>
       <div class="swiper-button-next"></div>
@@ -225,17 +239,19 @@
           <button>Comprar</button>
         </a>
       </div>
+
+      <div class="titulo-retro">RETROS</div>
     </section>
 
     <script>
       function abrirMenu() {
         document.getElementById("sidebar").style.left = "0";
-        document.body.style.overflow = "hidden"; // Impede rolagem ao abrir o menu
+        document.body.classList.add("no-scroll");
       }
 
       function fecharMenu() {
         document.getElementById("sidebar").style.left = "-250px";
-        document.body.style.overflow = "auto"; // Restaura a rolagem ao fechar o menu
+        document.body.classList.remove("no-scroll");
       }
     </script>
 
@@ -257,6 +273,38 @@
           disableOnInteraction: false,
         },
       });
+
+      document
+        .getElementById("form-pesquisa")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let termo = document.getElementById("pesquisa").value.toLowerCase();
+          let produtosHTML = document.querySelectorAll(".produto");
+
+          let produtosEncontrados = [];
+
+          produtosHTML.forEach((produto) => {
+            let nomeProduto = produto
+              .querySelector("h4")
+              .innerText.toLowerCase();
+            let imagemProduto = produto.querySelector("img").src;
+            let precoProduto = produto.querySelector("p").innerText;
+
+            if (nomeProduto.includes(termo)) {
+              produtosEncontrados.push({
+                time: nomeProduto,
+                imagem: imagemProduto,
+                preco: precoProduto,
+              });
+            }
+          });
+
+          localStorage.setItem(
+            "produtosPesquisa",
+            JSON.stringify(produtosEncontrados)
+          );
+          window.location.href = "pesquisa.html";
+        });
     </script>
     <script>
       window.onload = function () {
