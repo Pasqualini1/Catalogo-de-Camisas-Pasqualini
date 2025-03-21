@@ -9,6 +9,19 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita rolagem lateral */
+  padding-top: 30px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Correção da rolagem ao abrir o menu */
+.menu-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 header {
@@ -26,13 +39,13 @@ header {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  height: 80px; /* Defini um tamanho fixo para o header */
+  height: 80px;
 }
 
 /* Ajuste no conteúdo para não ficar escondido atrás do header */
 main {
-  flex: 1; /* Ocupa o espaço restante da tela */
-  padding-top: 100px; /* Dá espaço para o header */
+  flex: 1;
+  padding-top: 100px;
 }
 
 /* Ícone do menu */
@@ -45,16 +58,35 @@ main {
 
 /* Estilização da barra lateral */
 .sidebar {
-  height: 100%;
+  height: 100vh;
   width: 250px;
   position: fixed;
   top: 0;
-  left: -250px; /* Escondido inicialmente */
+  left: -250px;
   background-color: #111;
-  overflow-x: hidden;
-  transition: 0.4s;
+  overflow-y: auto;
+  transition: left 0.4s ease-in-out;
   padding-top: 60px;
   z-index: 1200;
+  scrollbar-width: thin;
+}
+
+/* Correção do menu aberto */
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
 }
 
 /* Estilo dos links do menu lateral */
@@ -87,7 +119,7 @@ main {
   justify-content: center;
   gap: 20px;
   padding: 30px;
-  margin-top: 40px; /* Diminui para ajustar o espaçamento */
+  margin-top: 40px;
 }
 
 /* Estilizando cada produto */
@@ -103,23 +135,25 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 500px;
+  overflow: hidden;
 }
 
-/* No Tablet (3 produtos por linha) */
+/* Responsividade */
 @media (max-width: 1024px) {
   .produto {
     width: calc(33.33% - 20px);
   }
 }
 
-/* No Celular Médio (2 produtos por linha) */
 @media (max-width: 768px) {
   .produto {
     width: calc(50% - 10px);
   }
 }
 
-/* No Celular Pequeno (1 produto por linha) */
 @media (max-width: 480px) {
   .produto {
     width: 100%;
@@ -128,8 +162,10 @@ main {
 
 .produto img {
   width: 100%;
+  height: 250px;
   border-radius: 10px;
   display: block;
+  object-fit: cover;
 }
 
 /* Melhorando os títulos */
@@ -147,12 +183,14 @@ main {
 
 /* Botão aprimorado */
 .produto button {
+  margin-top: auto;
   background: linear-gradient(90deg, #0077cc, #004488);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
@@ -177,7 +215,48 @@ main {
   color: #ffffff;
   background: linear-gradient(90deg, #0077cc, #004488);
   padding: 15px;
-  margin-top: 90px; /* Ajustado para alinhar com o header */
+  margin-top: 3px;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 15px;
+}
+
+.titulo-liga {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #0077cc, #004488);
+  padding: 15px;
+  margin-top: 80px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Correção do banner */
+.swiper {
+  width: 100%;
+  max-width: 1200px; /* Evita que o banner fique muito grande */
+  height: auto;
+  margin: 100px auto;
+  margin-top: 130px; /* Ajuste este valor conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Evita cortes desnecessários */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+  height: auto;
+  max-height: 300px; /* Ajuste conforme necessário */
+}
+
+.logo {
+  height: 130px; /* Ajuste conforme necessário */
+  position: absolute;
+  right: 100px; /* Distância da borda direita */
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
 }
