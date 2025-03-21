@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pasqualini Camisa de Time</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
       <span class="menu-icon" onclick="abrirMenu()">☰</span>
       <h1>Catálogo de Camisas</h1>
+      <img src="imagens/logoloja1.png" alt="Logo" class="logo" />
     </header>
 
     <!-- Barra Lateral (Menu) -->
@@ -21,80 +28,235 @@
       <a href="#">La Liga</a>
       <a href="#">Serie A</a>
       <a href="#">Bundesliga</a>
+      <a href="#">Primeira Liga</a>
+      <a href="#">Eradivisie</a>
+      <a href="#">Saudi Pro League</a>
       <a href="#">Seleções</a>
+      <a href="#">Player</a>
+      <a href="#">Retro</a>
+      <a href="#">Conjunto de Treino</a>
+      <a href="#">Kit de Inverno</a>
+      <a href="#">Infantil</a>
+      <a href="#">Outros</a>
+    </div>
+
+    <!-- Swiper (Banner) -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="imagens/oferta2.png" alt="Ofertas" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="imagens/tailandesa qualidade.png"
+            alt="Tailandesas de Qualidade"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img src="times-alta.jpg" alt="Times em Alta" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <!-- Seção do Catálogo -->
-<section class="catalogo">
+    <section class="catalogo">
+      <div class="titulo-lancamentos">LANÇAMENTOS</div>
 
-  <div class="titulo-lancamentos">
-    LANÇAMENTOS
-  </div>
-  
-  <div class="produto">
-      <img src="imagens/atletigomg.jpg" alt="Camisa Atlético">
-      <h4>Camisa Atlético - 25/26<br>SEM PATROCINADORES</h4>
-      <p>R$ 144,90</p>
-      <a href=
-      https://api.whatsapp.com/send?phone=5544997064408&text=
-      Olá, quero comprar a camisa do Atlético MG!" target="_blank">
+      <div class="produto">
+        <img src="imagens/atletigomg.jpg" alt="Camisa Atlético" />
+        <h4>Camisa Atlético - 25/26<br />SEM PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Atlético MG!"
+          target="_blank"
+        >
           <button>Comprar</button>
-      </a>
-  </div>
+        </a>
+      </div>
 
-  <div class="produto">
-      <img src="imagens/bahia.png" alt="Camisa Bahia">
-      <h4>Camisa Bahia - 24/25<br>+ PATROCINADORES</h4>
-      <p>R$ 144,90</p>
-      <a href=
-      "https://api.whatsapp.com/send?phone=5544997064408&text=
-      lá, quero comprar a camisa do Bahia!" target="_blank">
+      <div class="produto">
+        <img src="imagens/fluminense.jpeg" alt="Camisa Fluminense" />
+        <h4>Camisa Fluminense 25/26<br />+ PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Fluminense"
+          target="_blank"
+        >
           <button>Comprar</button>
-      </a>
-  </div>
+        </a>
+      </div>
 
-  <div class="produto">
-      <img src="imagens/Flamengo.png" alt="Camisa Flamengo">
-      <h4>Camisa Flamengo - 25/26<br>+ PATROCINADORES</h4>
-      <p>R$ 144,90</p>
-      <a href=
-      https://api.whatsapp.com/send?phone=5544997064408&text=
-      Olá, quero comprar a camisa do Flamengo!" target="_blank">
+      <div class="produto">
+        <img src="imagens/Flamengo.png" alt="Camisa Flamengo" />
+        <h4>Camisa Flamengo - 25/26<br />+ PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Flamengo!"
+          target="_blank"
+        >
           <button>Comprar</button>
-      </a>
-  </div>
+        </a>
+      </div>
 
-  <div class="produto">
-      <img src="imagens/Santos.png" alt="Camisa Santos">
-      <h4>Camisa Santos - 24/25<br>+ PATROCINADORES</h4>
-      <p>R$ 149,90</p>
-      <a href=
-      "https://api.whatsapp.com/send?phone=5544997064408&text=
-      Olá, quero comprar a camisa do Santos!" target="_blank">
+      <div class="produto">
+        <img src="imagens/Santos.png" alt="Camisa Santos" />
+        <h4>Camisa Santos - 24/25<br />+ PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Santos!"
+          target="_blank"
+        >
           <button>Comprar</button>
-      </a>
-  </div>
-</section>
+        </a>
+      </div>
 
+      <div class="produto">
+        <img src="imagens/palmeiras.png" alt="Camisa Palmeiras" />
+        <h4>Camisa Palmeiras - 25/26<br />+ PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Palmeiras!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/sao paulo.jpg" alt="Camisa Sao Paulo" />
+        <h4>Camisa São Paulo - 25/26<br />SEM PATROCINADORES</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do São Paulo!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="titulo-liga">LA LIGA</div>
+
+      <div class="produto">
+        <img src="imagens/barcelona.png" alt="Camisa Barcelona" />
+        <h4>
+          Camisa Barcelona<br />
+          - 24/25
+        </h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Barcelona!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/real madrid.jpg" alt="Camisa Real Madrid" />
+        <h4>Camisa Real Madrid - 25/26</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Real Madrid!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/atletico madrid.jpg" alt="Camisa Atletico Madrid" />
+        <h4>Camisa Atletico de Madrid - 24/25</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Atletico de Madrid!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/real betis.jpg" alt="Camisa Real Betis" />
+        <h4>Camisa Real Betis<br />- 24/25</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Real Betis!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/athletic.jpeg" alt="Camisa Atletico Bilbao" />
+        <h4>Camisa Atletico Bilbao - 24/25</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Atletico Bilbao!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/real sociedad.jpg" alt="Camisa Real Sociedad" />
+        <h4>Camisa Real Sociedad - 24/25</h4>
+        <p>R$ 144,90</p>
+        <a
+          href="https://api.whatsapp.com/send?phone=5544997064408&text=
+      Olá, quero comprar a camisa do Real Sociedad!"
+          target="_blank"
+        >
+          <button>Comprar</button>
+        </a>
+      </div>
+    </section>
 
     <script>
       function abrirMenu() {
         document.getElementById("sidebar").style.left = "0";
+        document.body.style.overflow = "hidden"; // Impede rolagem ao abrir o menu
       }
 
       function fecharMenu() {
         document.getElementById("sidebar").style.left = "-250px";
+        document.body.style.overflow = "auto"; // Restaura a rolagem ao fechar o menu
       }
     </script>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
   </body>
 </html>
